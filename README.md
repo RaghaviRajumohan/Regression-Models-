@@ -7,7 +7,7 @@ This repository contains a collection of machine learning projects aimed at buil
 Each project in this repository follows a consistent structure to ensure clarity and reproducibility:
 
 - **Data Collection and Preprocessing**
-  - Import and explore the dataset using Pandas and NumPy.
+  - Import and explore the dataset using **Pandas** and **NumPy**.
   - Handle missing values through imputation techniques.
   - Perform data cleaning to remove duplicates and irrelevant features.
   - Apply feature scaling and normalization to ensure uniform data distribution.
