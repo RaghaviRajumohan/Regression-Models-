@@ -25,7 +25,7 @@ Each project in this repository follows a consistent structure to ensure clarity
 
 - **Model Building and Evaluation**
   - Split the data into training and testing sets.
-  - Implement multiple machine learning algorithms.
+  - Implement competing multiple regression models using Ordinary Least Squares (OLS) 
   - Tune hyperparameters using GridSearchCV and RandomizedSearchCV to optimize model performance.
   - Evaluate models based on metrics such as Mean Absolute Error (MAE), Mean Squared Error (MSE), Root Mean Squared Error (RMSE), and R-squared score.
 
