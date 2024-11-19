@@ -17,12 +17,18 @@ An exploration of the relationship between Uber's presence and public transit ri
 - **Advanced Techniques**: Log transformations, interaction terms, and entity-time fixed effects to address nuanced dynamics.
 - **Visualization**: Regression plots and residual analyses were employed to ensure model interpretability.
 
-#### **3. Double LASSO Regression Models**
+#### **3. BLP Modeling for Pizza Market Analysis**
+This project employed the Berry-Levinsohn-Pakes (BLP) demand estimation framework to analyze competition and market dynamics in the pizza delivery market. Key components included:
+- **Econometric Techniques**: Applied Nonlinear Regression, Instrumental Variables (IV) Regression, and fixed effects modeling to estimate consumer preferences and substitution patterns.
+- **Market Insights**: Evaluated the impact of pricing, product differentiation, and market characteristics on consumer demand.
+- **Performance Metrics**: Assessed model fit using log-likelihood and out-of-sample prediction accuracy, providing robust demand estimates for strategic decision-making.
+- 
+#### **4. Double LASSO Regression Models**
 A comprehensive analysis of variable selection and causal inference using:
 - **Double LASSO Approaches**: Implementations included Cross-Fitted Double-LASSO for robust feature selection.
 - **Simulation Studies**: Performance was validated through Mean Squared Error (MSE) calculations and statistical comparisons.
 
-#### **4. Automated Cloud-Based Models**
+#### **5. Automated Cloud-Based Models**
 This project integrated machine learning models into Google Cloud Functions to enable scalable automation, including:
 - **Real-Time Predictions**: Models deployed for property valuation using Scikit-learn.
 - **Web Scraping**: Automated data collection pipelines for real-time updates.
