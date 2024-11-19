@@ -1,49 +1,73 @@
 # Prediction Models Repository
 
 ## Overview
-In this project, I developed a predictive model for housing prices using Ordinary Least Squares (OLS) multiple regression. The project involved applying feature engineering techniques such as One-Hot Encoding and scaling to prepare the data for modeling. Various regression models, including Simple Linear Regression, Multiple Linear Regression, Polynomial Regression, and Logit Regression, were tested and compared using performance metrics like R-squared, adjusted R-squared, and Mean Squared Error (MSE).
+This repository highlights a series of projects that utilize advanced data science techniques, statistical modeling, and machine learning to address diverse real-world challenges. The projects emphasize end-to-end workflows, from data preprocessing and feature engineering to model evaluation and visualization. The following sections detail the steps and methods employed across these projects.
 
-Cross-validation was employed to evaluate the models' generalizability, and the most optimal model was selected based on overall performance and prediction accuracy. The goal was to create a reliable model capable of predicting housing prices using key factors such as location, square footage, and market trends.
+### Key Projects:
 
-### Key Steps and Techniques:
+#### **1. Housing Price Prediction**
+This project involved developing a predictive model for housing prices using Ordinary Least Squares (OLS) multiple regression, supplemented with advanced feature engineering and statistical evaluation. Key highlights include:
+- **Modeling Techniques**: Simple Linear Regression, Multiple Linear Regression, Polynomial Regression, and Logit Regression were employed and compared.
+- **Performance Metrics**: R-squared, adjusted R-squared, and Mean Squared Error (MSE) were used for evaluation.
+- **Generalizability**: Cross-validation and bootstrapping techniques ensured robust model performance.
 
-#### Data Preprocessing:
-- **Data Loading & Cleaning**: Loaded the housing dataset and addressed missing values by imputing with the median for numerical features and the mode for categorical features, ensuring the dataset was clean and ready for analysis.
-- **Encoding Categorical Variables**: Applied One-Hot Encoding to convert categorical variables like neighborhood and house style into binary form, which allowed the regression model to process these features.
-- **Scaling Features**: Used MinMaxScaler to scale continuous variables like house size and price to a range between 0 and 1, normalizing data to improve model convergence and performance.
-- **Exploratory Data Analysis**: Generated Cullen and Frey plots to explore the data distribution and variability of features, identifying patterns such as skewness and kurtosis that informed feature selection and model assumptions.
+#### **2. Uber and Public Transit Impact Analysis**
+An exploration of the relationship between Uber's presence and public transit ridership using:
+- **Statistical Models**: OLS, PanelOLS, LASSO regression, and Double-LASSO regression.
+- **Advanced Techniques**: Log transformations, interaction terms, and entity-time fixed effects to address nuanced dynamics.
+- **Visualization**: Regression plots and residual analyses were employed to ensure model interpretability.
 
-#### Feature Selection:
-- **Correlation Analysis**: Conducted correlation matrix analysis to identify highly correlated features with the target variable (housing price). This step reduced multicollinearity, improving the model’s interpretability.
-- **Boruta Algorithm**: Implemented the Boruta Algorithm to rank the importance of features, eliminating irrelevant features while retaining those that contributed the most predictive power to the model.
-- **Multicollinearity Check**: Calculated the Variance Inflation Factor (VIF) for each feature to detect multicollinearity. Features with a VIF above 10 were removed or combined to reduce redundancy and improve model stability.
+#### **3. Double LASSO Regression Models**
+A comprehensive analysis of variable selection and causal inference using:
+- **Double LASSO Approaches**: Implementations included Cross-Fitted Double-LASSO for robust feature selection.
+- **Simulation Studies**: Performance was validated through Mean Squared Error (MSE) calculations and statistical comparisons.
 
-#### Model Development:
-- **Model Selection**: Developed and compared multiple regression models, including:
-  - **Simple Linear Regression** to establish a baseline prediction using only one feature.
-  - **Multiple Linear Regression** to account for interactions between multiple features affecting housing price.
-  - **Polynomial Regression** to capture non-linear relationships between features and the target variable.
-  - **Logit Regression** to evaluate the probability of houses falling into different price ranges (useful for classification scenarios).
-- **Model Comparison**: Models were compared based on interpretability, as well as performance metrics like R-squared, adjusted R-squared, and Mean Squared Error (MSE). This ensured that the chosen model was both accurate and suitable for the business objectives.
+#### **4. Automated Cloud-Based Models**
+This project integrated machine learning models into Google Cloud Functions to enable scalable automation, including:
+- **Real-Time Predictions**: Models deployed for property valuation using Scikit-learn.
+- **Web Scraping**: Automated data collection pipelines for real-time updates.
 
-#### Model Evaluation:
-- **Cross-Validation**: Performed k-fold cross-validation to assess model generalizability and prevent overfitting. The dataset was split into training and test sets multiple times, allowing robust evaluation on unseen data.
-- **Performance Metrics**: Calculated Mean Squared Error (MSE) to quantify the model’s predictive error and R-squared to measure the proportion of variance explained by the model. These metrics were crucial for determining how well the model would perform in predicting housing prices.
-- **Bootstrapping**: Applied bootstrapping techniques to generate multiple samples from the dataset, testing the model’s consistency and reliability across various sample distributions.
+---
 
-#### Visualization:
-- **Data Visualization**: Used Matplotlib and Seaborn to create a variety of plots to visualize relationships between features and the target variable. This included:
-  - **Box plots** and **histograms** to show feature distribution and outliers.
-  - **Regression plots** to demonstrate the linear relationship between selected features and housing price.
-  - **Residual plots** to evaluate model accuracy by analyzing the differences between predicted and actual values.
-- **Model Results Visualization**: Generated detailed plots showing the performance of different models, enabling stakeholders to understand the model's behavior and make informed decisions.
+### Technical Tools and Skills:
+- [![Python](https://img.shields.io/badge/Code-Python-blue)]()
+- [![Scikit-learn](https://img.shields.io/badge/Library-Scikit--learn-orange)]()
+- [![Pandas](https://img.shields.io/badge/Data-Pandas-yellow)]()
+- [![Matplotlib](https://img.shields.io/badge/Visualization-Matplotlib-green)]()
+- [![Google Cloud](https://img.shields.io/badge/Cloud-Google%20Cloud-lightblue)]()
+- [![Statsmodels](https://img.shields.io/badge/Stats-Statsmodels-brightgreen)]()
+- [![NumPy](https://img.shields.io/badge/Math-NumPy-purple)]()
+- [![Beautiful Soup](https://img.shields.io/badge/Web%20Scraping-Beautiful%20Soup-yellowgreen)]()
+- [![Requests](https://img.shields.io/badge/Web%20Scraping-Requests-blue)]()
+- [![Selenium](https://img.shields.io/badge/Web%20Scraping-Selenium-orange)]()
 
-#### Technical Skills:
-- **Python**: Utilized Python for data manipulation, statistical analysis, and model development, leveraging its libraries to create a streamlined workflow.
-- **Pandas**: Used Pandas for efficient data wrangling, cleaning, and manipulation of large datasets.
-- **Scikit-learn**: Applied Scikit-learn for model development, feature selection, cross-validation, and model evaluation techniques.
-- **NumPy**: Leveraged NumPy for fast numerical operations and matrix computations to ensure efficient handling of large datasets.
-- **Matplotlib & Seaborn**: Used these libraries to create detailed visualizations for data analysis and model interpretation.
 
-#### Final Takeaways:
-This project highlighted the complete process of building a regression model, from feature engineering and data preprocessing to model evaluation and selection. Advanced techniques such as cross-validation, bootstrapping, and feature selection ensured that the final model was both reliable and interpretable. By focusing on model robustness and performance, I developed a predictive tool that provides valuable insights for decision-making in real estate investment.
+---
+
+### Detailed Project Workflow:
+
+#### **Data Preprocessing**
+- **Cleaning and Transformation**: Addressed missing values using appropriate imputation techniques and normalized continuous variables for improved model performance.
+- **Feature Engineering**: Created derived variables such as interaction terms, log transformations, and One-Hot Encodings to capture nuanced relationships in the data.
+- **Exploratory Data Analysis (EDA)**: Visualized and assessed data distributions, identified patterns, and ensured compatibility with modeling techniques.
+
+#### **Feature Selection**
+- **Correlation Analysis**: Used correlation matrices to identify relationships and reduce redundancy.
+- **Dimensionality Reduction**: Applied algorithms like Boruta and Double-LASSO to select impactful features while minimizing noise.
+
+#### **Model Development**
+- **Model Variety**: Implemented diverse models, including regression (OLS, LASSO, and Polynomial), classification, and machine learning approaches tailored to the problem.
+- **Scalability**: Optimized models for deployment in cloud environments using scalable frameworks like Google Cloud Functions.
+
+#### **Model Evaluation**
+- **Performance Metrics**: Evaluated using R-squared, Mean Squared Error (MSE), and other appropriate measures.
+- **Validation Techniques**: Employed cross-validation, bootstrapping, and residual analyses to ensure robust and generalizable results.
+
+#### **Visualization**
+- **Data Insights**: Generated visualizations such as box plots, regression plots, and residual plots to communicate findings clearly.
+- **Model Comparisons**: Used visual tools to compare model performance, aiding in stakeholder understanding and decision-making.
+
+---
+
+### Final Takeaways:
+This repository demonstrates a mastery of data science workflows, combining statistical rigor with machine learning methodologies. Each project highlights practical solutions and interpretable results, emphasizing technical precision, automation, and actionable insights.
